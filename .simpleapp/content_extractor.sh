@@ -10,9 +10,9 @@ echo ""
 # STEP1 - Cofigure Termux Storage
     if [ -d "$HOME/storage" ] 
 then
-    echo "Directory /path/to/dir exists." 
+    echo "Directory Storage exists." 
 else
-    echo "Error: Directory /path/to/dir does not exists."
+    echo "Error: Directory Storage does not exists."
 fi
 
 

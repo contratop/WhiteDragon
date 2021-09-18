@@ -63,6 +63,7 @@ do
              pkg upgrade
             #aqui se instalan paquetes via apt o pkg
              pkg install python3
+             pkg install git
              #aqui se instalan paquetes de python
              pip install youtube-dl
 
