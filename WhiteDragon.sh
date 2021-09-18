@@ -3,12 +3,16 @@
 #First Run
 clear
 
-echo -e " _       ____    _ __       ____                             
-| |     / / /_  (_) /____  / __ \_________ _____ _____  ____ 
-| | /| / / __ \/ / __/ _ \/ / / / ___/ __ `/ __ `/ __ \/ __ 
-| |/ |/ / / / / / /_/  __/ /_/ / /  / /_/ / /_/ / /_/ / / / /
-|__/|__/_/ /_/_/\__/\___/_____/_/   \__,_/\__, /\____/_/ /_/ 
-                                         /____/              "
+#Banner Print
+ if [ -d ".simpleapp" ] 
+    then
+    cat banner.bn
+    else
+    cat WhiteDragon/banner.bn
+    fi
+
+echo ""
+
 #Software info
 echo "Artemis WhiteDragon"
 echo "v0.8"
