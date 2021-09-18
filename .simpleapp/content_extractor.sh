@@ -21,6 +21,7 @@ echo ""
     sleep 3
     clear
     fi
+
 #STEP2 - Aprovisionar youtube-dl
     cd storage/downloads
     clear
@@ -35,6 +36,7 @@ echo ""
         echo ""
         read -p "Escribe el codigo del formato que deseas descargar> " codeformat
         clear
+#STEP3 - Descarga del contenido
         echo "Descargando el contenido"
         sleep 1
         youtube-dl -f $codeformat $url
