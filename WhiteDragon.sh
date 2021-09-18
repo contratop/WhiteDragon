@@ -23,7 +23,7 @@ do
         clear
              echo "WhiteDragon Tools"
                 PS3='Tools disponibles: '
-             options=("Content-Exractor" "Exit")
+             options=("Content-Extractor" "Exit")
              select opt in "${options[@]}"
              do
                 case $opt in
