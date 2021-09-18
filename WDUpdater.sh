@@ -4,7 +4,7 @@ echo "Artemis WhiteDragon Updater"
 echo ""
 echo "Esto reinstalara por completo WhiteDragon instalando la ultima version disponible en GitHub"
 echo "para proceder, escriba 'reinstall'"
-read -p "Presione cualquier tecla para abortar" CONT
+read -p "Presione cualquier tecla para abortar: " CONT
 	if [ "$CONT" = "reinstall" ]; then
     clear
         echo "Actualizando Artemis WhiteDragon..."
@@ -23,6 +23,7 @@ read -p "Presione cualquier tecla para abortar" CONT
                 pkg update 
                 pkg upgrade
         #Fin de fase
+        clear
         echo "WhiteDragon Actualizado"
         read -n 1 -s -r -p "Presiona cualquier tecla para salir"
         cd $HOME
