@@ -65,7 +65,7 @@ do
       echo "Se van a actualizar las aplicaciones base"
       echo "Y se van a instalar algunos modulos necesarios para el correcto funcionamiento de WhiteDragon"
       echo "Escriba 'update' para continuar"
-        read -p "O escriba cualquier otra cosa para cancelar" CONT
+        read -p "O escriba cualquier otra cosa para cancelar: " CONT
 	    if [ "$CONT" = "update" ]; then
         clear
             #aqui se actualizan los paquetes existentes
