@@ -84,7 +84,7 @@ do
         exit
 
          fi
-exit
+        exit
         
         
         ;;
