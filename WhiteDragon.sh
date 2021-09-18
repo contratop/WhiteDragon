@@ -30,7 +30,8 @@ do
 
                         "Content-Extractor")
                         clear
-                        bash .simpleapp/content_extractor.sh
+                        cd WhiteDragon/.simpleapp
+                        bash content_extractor.sh
                         exit
                         ;;
         
