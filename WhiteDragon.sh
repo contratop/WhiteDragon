@@ -49,42 +49,45 @@ do
 
 
      "UpdateBase")
+      echo ""
       echo "Actualizar modulos WhiteDragon"
       echo ""
       echo "Se van a actualizar las aplicaciones base"
       echo "Y se van a instalar algunos modulos necesarios para el correcto funcionamiento de WhiteDragon"
       echo "Escriba 'update' para continuar"
         read -p "O escriba cualquier otra cosa para cancelar" CONT
-	if [ "$CONT" = "update" ]; then
-    clear
-        #aqui se actualizan los paquetes existentes
-        pkg update
-        pkg upgrade
-        #aqui se instalan paquetes via apt o pkg
-        pkg install python3
-        #aqui se instalan paquetes de python
-        pip install youtube-dl
-
-        echo "Los paquetes base han sido actualizados"
-        read -n 1 -s -r -p "Presiona cualquier tecla para salir"
+	    if [ "$CONT" = "update" ]; then
         clear
+            #aqui se actualizan los paquetes existentes
+             pkg update
+             pkg upgrade
+            #aqui se instalan paquetes via apt o pkg
+             pkg install python3
+             #aqui se instalan paquetes de python
+             pip install youtube-dl
+
+                echo ""
+                echo "Los paquetes base han sido actualizados"
+                read -n 1 -s -r -p "Presiona cualquier tecla para salir"
+                clear
         exit
         
 
-    else
+        else
 
-        echo "No se ha detectado 'update', operacion abortada"
-        read -n 1 -s -r -p "Presiona cualquier tecla para salir"
-        clear
-    exit
+                 echo ""
+                 echo "No se ha detectado 'update', operacion abortada"
+                 read -n 1 -s -r -p "Presiona cualquier tecla para salir"
+                 clear
+        exit
 
-    fi
+         fi
 exit
         
         
         ;;
      "Quit")
-    clear
+         clear
             exit
             ;;
         *) echo "Opcion invalida $REPLY";;
