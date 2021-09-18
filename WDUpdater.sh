@@ -26,7 +26,6 @@ read -p "Presione cualquier tecla para abortar: " CONT
         clear
         echo "WhiteDragon Actualizado"
         read -n 1 -s -r -p "Presiona cualquier tecla para salir"
-        cd $HOME
         clear
         exit
 
