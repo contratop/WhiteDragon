@@ -11,8 +11,18 @@ I plan to create it for Termux on Android, for traditional terminal on Linux and
 
 Some utilities from other developers will be collected within the same automated script.
 
+## How to Install
+
     git clone https://github.com/contratop/WhiteDragon
     
+## Execute
+
+    bash WhiteDragon/WhiteDragon.sh
+
+## Update WhiteDragon
+
+    bash WhiteDragon/WDUpdater.sh (Work in Progress)
+
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
 
 
