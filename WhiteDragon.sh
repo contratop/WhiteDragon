@@ -21,6 +21,7 @@ do
 
      "Tools")
         clear
+        cd WhiteDragon
              echo "WhiteDragon Tools"
                 PS3='Tools disponibles: '
              options=("Content-Extractor" "Exit")
@@ -30,8 +31,7 @@ do
 
                         "Content-Extractor")
                         clear
-                        cd WhiteDragon/.simpleapp
-                        bash content_extractor.sh
+                         bash ".simpleapp/content_extractor.sh"
                         exit
                         ;;
         
