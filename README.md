@@ -38,7 +38,7 @@ There is a better version of this tool
 
 ---
 
-## FTP Server
+## FTP Server (WIP)
 
 open a local FTP server
 
