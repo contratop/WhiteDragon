@@ -33,7 +33,7 @@ do
         cd WhiteDragon
              echo "WhiteDragon Tools"
                 PS3='Tools disponibles: '
-             options=("Content-Extractor" "Exit")
+             options=("Content-Extractor" "FTP-Server" "Exit")
              select opt in "${options[@]}"
              do
                 case $opt in
@@ -44,6 +44,11 @@ do
                         exit
                         ;;
         
+                        "FTP-Server")
+                        clear
+                         python3 ".simpleapp/ftpserver.py"
+                        exit
+                        ;;
                         "Exit")
                         clear
                         exit
