@@ -84,7 +84,7 @@ do
 
                             if [ -d "AppData/sherlock" ] 
                             then
-                               
+                               echo ""
                             else
                                git clone https://github.com/sherlock-project/sherlock.git AppData/sherlock
                                cd 
