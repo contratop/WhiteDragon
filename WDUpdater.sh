@@ -100,8 +100,15 @@ done
 
 ;;
 
-
-
+        "Desinstalar")
+        clear
+          echo "Esto Desinstalara por completo WhiteDragon"
+echo ""
+echo "ADVERTENCIA: todas las aplicaciones descargadas con WhiteDragon seran eliminadas"
+echo "Incluyendo configuracion de dichas aplicaciones"
+echo ""
+echo "para proceder, escriba 'uninstall'"
+;;
         "Quit")
 		clear
             exit
