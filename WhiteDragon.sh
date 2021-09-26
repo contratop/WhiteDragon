@@ -115,6 +115,7 @@ do
      "UpdateDependency")
       clear
       bash WhiteDragon/WDUpdater.sh
+      exit
         ;;
      "Quit")
          clear
