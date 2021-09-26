@@ -91,7 +91,7 @@ read -p "Presione cualquier tecla para abortar: " CONT
              #aqui se instalan paquetes de python
              pip install youtube-dl
              python -m pip install pyftpdlib
-        break
+        exit
         ;;
         [Nn]* ) exit;;
         * ) echo "Escribe Y o N";;
@@ -107,8 +107,24 @@ echo ""
 echo "ADVERTENCIA: todas las aplicaciones descargadas con WhiteDragon seran eliminadas"
 echo "Incluyendo configuracion de dichas aplicaciones"
 echo ""
-echo "para proceder, escriba 'uninstall'"
+  read -p "Estas seguro que desea desinstalar WhiteDragon? [Y/N]" yn
+    case $yn in
+        [Yy]* ) 
+        cd $HOME
+        rm -r -f WhiteDragon
+exit
+        ;;
+        [Nn]* ) exit;;
+        * ) echo "Escribe Y o N";;
+    esac
+done
 ;;
+
+
+
+
+
+
         "Quit")
 		clear
             exit
