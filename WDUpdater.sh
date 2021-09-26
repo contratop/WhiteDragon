@@ -119,7 +119,7 @@ read -p "Presione cualquier tecla para abortar: " CONT
         echo "WhiteDragon ha sido desinstalado correctamente"
         echo ""
         exit 
-        ;;
+        
         "Quit")
 		clear
             exit
