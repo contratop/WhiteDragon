@@ -54,7 +54,7 @@ read -p "Presione cualquier tecla para abortar: " CONT
              echo sleep 1
         #Fase 4 - Actualizando de la lista de dependencias de System
         echo "Progreso: 4/4 (Actualizando Pack de librerias)"
-             python3 -m pip install -r WhiteDragon/.system/dependency.txt
+             
         #Fin de fase
         clear
         echo "WhiteDragon Actualizado"
@@ -111,7 +111,7 @@ done
           exit
           ;;
 
-          
+
         "Quit")
 		clear
             exit

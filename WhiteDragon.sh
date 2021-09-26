@@ -87,10 +87,11 @@ do
                                echo ""
                             else
                                git clone https://github.com/sherlock-project/sherlock.git AppData/sherlock
-                               cd 
+                               cd $HOME/WhiteDragon/AppData/sherlock
+                               python3 -m pip install -r requirements.txt
                             fi
                             clear
-                            cd AppData/sherlock
+                            cd $HOME/WhiteDragon/AppData/sherlock
                             read -p "Escribe el Username que se va a buscar en Sherlock" sherk
                             clear
                             python3 sherlock $sherk
