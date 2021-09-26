@@ -118,19 +118,11 @@ read -p "Presione cualquier tecla para abortar: " CONT
         clear
         echo "WhiteDragon ha sido desinstalado correctamente"
         echo ""
-        exit
-
-
-
-
-
-         ;;
-
-
+        exit 
+        ;;
         "Quit")
 		clear
             exit
-            ;;
         *) echo "invalid option $REPLY";;
     esac
 done
