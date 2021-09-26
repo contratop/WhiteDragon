@@ -75,6 +75,7 @@ read -p "Presione cualquier tecla para abortar: " CONT
 
 
           "Actualizar-Dependencias")
+
           clear
           echo "Esto actualizara solo las dependencias necesarias para el correcto funcionamiento de WhiteDragon"
           while true; do
@@ -90,13 +91,14 @@ read -p "Presione cualquier tecla para abortar: " CONT
              #aqui se instalan paquetes de python
              pip install youtube-dl
              python -m pip install pyftpdlib
-        
+        break
         ;;
         [Nn]* ) exit;;
         * ) echo "Escribe Y o N";;
     esac
 done
 ;;
+
         "Desinstalar")
                 clear
 echo "Esto Desinstalara por completo WhiteDragon"
@@ -119,10 +121,14 @@ read -p "Presione cualquier tecla para abortar: " CONT
         echo "WhiteDragon ha sido desinstalado correctamente"
         echo ""
         exit 
-        
+
+        ;;
+
         "Quit")
 		clear
             exit
+            
+            ;;
         *) echo "invalid option $REPLY";;
     esac
 done
