@@ -21,7 +21,7 @@ echo ""
 
 echo WhiteDragon Main Menu
   PS3='Elija una opcion: '
-options=("Tools" "UpdateBase" "Quit")
+options=("Tools" "UpdateDependency" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -46,9 +46,26 @@ do
         
                         "FTP-Server")
                         clear
+                        #Check and prompt for Storage Acess
+                           if [ -d "$HOME/storage" ] 
+                            then
+                                clear
+                                sleep 1
+                            else
+                                clear
+                                echo "Termux didn't find a way to your internal storage"
+                                echo "Choose if you want to grant permission to access the internal memory"
+                                sleep 3
+                                termux-setup-storage
+                            fi
+    
                          python3 ".simpleapp/ftpserver.py"
                         exit
                         ;;
+
+
+
+
                         "Exit")
                         clear
                         exit
@@ -63,7 +80,7 @@ do
             ;;
 
 
-     "UpdateBase")
+     "UpdateDependency")
       echo ""
       echo "Actualizar modulos WhiteDragon"
       echo ""
@@ -81,6 +98,8 @@ do
              pkg install git
              #aqui se instalan paquetes de python
              pip install youtube-dl
+             python -m pip install pyftpdlib
+
 
                 echo ""
                 echo "Los paquetes base han sido actualizados"
