@@ -97,32 +97,10 @@ read -p "Presione cualquier tecla para abortar: " CONT
         * ) echo "Escribe Y o N";;
     esac
 done
+
 ;;
 
-        "Desinstalar")
-                clear
-echo "Esto Desinstalara por completo WhiteDragon"
-echo ""
-echo "ADVERTENCIA: todas las aplicaciones descargadas con WhiteDragon seran eliminadas"
-echo "Incluyendo configuracion de dichas aplicaciones"
-echo ""
-echo "para proceder, escriba 'uninstall'"
-read -p "Presione cualquier tecla para abortar: " CONT
-	if [ "$CONT" = "uninstall" ]; then
-    clear
-        echo "Desinstalando Artemis WhiteDragon..."
-        #Fase 1 - aprovisionar el sistema de archivos de WhiteDragon#
-        echo "Progreso: 1/1 (Limpiando aplicaciones instaladas y Desinstalando WhiteDragon)"
-                sleep 1
-                cd $HOME
-                rm -f -r WhiteDragon
-                sleep 1
-        clear
-        echo "WhiteDragon ha sido desinstalado correctamente"
-        echo ""
-        exit 
 
-        ;;
 
         "Quit")
 		clear
