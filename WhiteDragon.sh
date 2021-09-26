@@ -115,28 +115,6 @@ do
      "UpdateDependency")
       clear
       bash WhiteDragon/WDUpdater.sh
-      exit
-
-
-                echo ""
-                echo "Los paquetes base han sido actualizados"
-                read -n 1 -s -r -p "Presiona cualquier tecla para salir"
-                clear
-        exit
-        
-
-        else
-
-                 echo ""
-                 echo "No se ha detectado 'update', operacion abortada"
-                 read -n 1 -s -r -p "Presiona cualquier tecla para salir"
-                 clear
-        exit
-
-         fi
-        exit
-        
-        
         ;;
      "Quit")
          clear
