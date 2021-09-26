@@ -6,7 +6,10 @@ clear
 #Banner Print
  if [ -d ".simpleapp" ] 
     then
-    cat banner.bn
+    echo "Execution Error"
+    echo "Execute from bash WhiteDragon/WhiteDragon.sh"
+    echo ""
+    exit
     else
     cat WhiteDragon/banner.bn
     fi
@@ -33,7 +36,7 @@ do
         cd WhiteDragon
              echo "WhiteDragon Tools"
                 PS3='Tools disponibles: '
-             options=("Content-Extractor" "FTP-Server" "Exit")
+             options=("Content-Extractor" "FTP-Server" "SocialSploit" "Sherlock" "Exit")
              select opt in "${options[@]}"
              do
                 case $opt in
@@ -62,10 +65,39 @@ do
                          python3 ".simpleapp/ftpserver.py"
                         exit
                         ;;
+                        "SocialSploit")
+                        
+                            if [ -d "AppData/SocialSploit" ] 
+                            then
+                               cd AppData/SocialSploit
+                               ./Sploit
+                            else
+                               git clone https://github.com/Cesar-Hack-Gray/SocialSploit AppData/SocialSploit
+                               cd AppData/SocialSploit
+                               bash install.sh
+                               ./Sploit
+                            fi
 
+                        ;;
 
+                        "Sherlock")
 
+                            if [ -d "AppData/sherlock" ] 
+                            then
+                               
+                            else
+                               git clone https://github.com/sherlock-project/sherlock.git AppData/sherlock
+                               cd 
+                            fi
+                            clear
+                            cd AppData/sherlock
+                            read -p "Escribe el Username que se va a buscar en Sherlock" sherk
+                            clear
+                            python3 sherlock $sherk
+                            echo ""
+                            exit
 
+                        ;;
                         "Exit")
                         clear
                         exit
@@ -81,24 +113,9 @@ do
 
 
      "UpdateDependency")
-      echo ""
-      echo "Actualizar modulos WhiteDragon"
-      echo ""
-      echo "Se van a actualizar las aplicaciones base"
-      echo "Y se van a instalar algunos modulos necesarios para el correcto funcionamiento de WhiteDragon"
-      echo "Escriba 'update' para continuar"
-        read -p "O escriba cualquier otra cosa para cancelar: " CONT
-	    if [ "$CONT" = "update" ]; then
-        clear
-            #aqui se actualizan los paquetes existentes
-             pkg update
-             pkg upgrade
-            #aqui se instalan paquetes via apt o pkg
-             pkg install python3
-             pkg install git
-             #aqui se instalan paquetes de python
-             pip install youtube-dl
-             python -m pip install pyftpdlib
+      clear
+      bash WhiteDragon/WDUpdater.sh
+      exit
 
 
                 echo ""
