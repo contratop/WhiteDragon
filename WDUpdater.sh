@@ -96,6 +96,7 @@ read -p "Presione cualquier tecla para abortar: " CONT
         * ) echo "Escribe Y o N";;
     esac
 done
+;;
         "Desinstalar")
                 clear
 echo "Esto Desinstalara por completo WhiteDragon"
