@@ -33,7 +33,7 @@ do
 
      "Tools")
         clear
-        cd WhiteDragon
+        cd $HOME/WhiteDragon
              echo "WhiteDragon Tools"
                 PS3='Tools disponibles: '
              options=("Content-Extractor" "FTP-Server" "SocialSploit" "Sherlock" "Exit")
