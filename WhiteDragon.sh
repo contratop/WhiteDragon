@@ -36,15 +36,24 @@ do
         cd $HOME/WhiteDragon
              echo "WhiteDragon Tools"
                 PS3='Tools disponibles: '
-             options=("Content-Extractor" "FTP-Server" "SocialSploit" "Sherlock" "Exit")
+             options=("PatataTube" "FTP-Server" "SocialSploit" "Sherlock" "Exit")
              select opt in "${options[@]}"
              do
                 case $opt in
 
-                        "Content-Extractor")
-                        clear
-                         bash ".simpleapp/content_extractor.sh"
-                        exit
+                        "PatataTube")
+                        
+                            if [ -d "AppData/PatataTube" ] 
+                            then
+                               cd AppData/PatataTube
+                               bash patatatube.sh
+                            else
+                               git clone https://github.com/pokeinalover/PatataTube AppData/PatataTube
+                               cd AppData/PatataTube
+                               bash patatatube.sh
+                            fi
+                            exit
+
                         ;;
         
                         "FTP-Server")
@@ -65,6 +74,8 @@ do
                          python3 ".simpleapp/ftpserver.py"
                         exit
                         ;;
+
+                        
                         "SocialSploit")
                         
                             if [ -d "AppData/SocialSploit" ] 
@@ -77,6 +88,7 @@ do
                                bash install.sh
                                ./Sploit
                             fi
+                            exit
 
                         ;;
 

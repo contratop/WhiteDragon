@@ -102,13 +102,8 @@ done
 
         "Desinstalar")
         clear
-          echo "Densistalando WhiteDragon"
-          cd $HOME
-          rm -r -f WhiteDragon
-          clear
-          echo "Desinstalado correctamente"
-          echo ""
-          exit
+        bash WDuninst.sh
+         exit
           ;;
 
 
